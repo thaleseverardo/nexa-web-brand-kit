@@ -914,13 +914,13 @@ ${aiMarkdownText}`;
       {/* Top cosmic ambient light gradients */}
       <div className="absolute top-0 left-1/4  w-150h-150 bg-purple-600/10 rounded-full blur-[130px] pointer-events-none animate-pulse duration-10000" />
       <div className="absolute top-40 right-1/4 w-150 h-150 bg-cyan-600/5 rounded-full blur-[130px] pointer-events-none animate-pulse duration-7000" />
-      <div className="absolute top-[30%] left-10 w-[400px] h-[400px] bg-pink-600/3 rounded-full blur-[110px] pointer-events-none" />
+      <div className="absolute top-[30%] left-10 w-100 h-100 bg-pink-600/3 rounded-full blur-[110px] pointer-events-none" />
 
       {/* Top Banner / Header */}
-      <header id="header_section" className="relative border-b border-white/5 bg-[#0B0E14]/85 backdrop-blur-xl sticky top-0 z-40 transition-all">
+      <header id="header_section" className="border-b border-white/5 bg-[#0B0E14]/85 backdrop-blur-xl sticky top-0 z-40 transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-xl bg-[#121625] border border-white/10 flex items-center justify-center shadow-lg shadow-purple-500/5 shrink-0 p-1.5 bg-gradient-to-br from-[#121625] to-[#0B0E14] hover:border-purple-500/40 transition-all duration-300">
+            <div className="h-10 w-10 rounded-xl bg-[#121625] border border-white/10 flex items-center justify-center shadow-lg shadow-purple-500/5 shrink-0 p-1.5 bg-linear-to-br from-[#121625] to-[#0B0E14] hover:border-purple-500/40 transition-all duration-300">
               <img 
                 src={`${import.meta.env.BASE_URL}assets/core/nexa_isomark_light_transp.svg`} 
                 alt="NEXA Isomark" 
@@ -930,18 +930,18 @@ ${aiMarkdownText}`;
             </div>
             <div>
               <h1 className="text-lg font-display font-bold text-white tracking-tight leading-tight flex items-center gap-2">
-                NEXA <span className="text-[10px] tracking-widest px-2 py-0.5 bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] rounded-full text-white font-extrabold font-mono">BRAND KIT</span>
+                NEXA <span className="text-[10px] tracking-widest px-2 py-0.5 bg-linear-to-r from-[#0070F3] to-[#8B5CF6] rounded-full text-white font-extrabold font-mono">BRAND KIT</span>
               </h1>
               <p className="text-[9px] text-gray-400 uppercase tracking-[0.25em] font-semibold">Guia Oficial</p>
             </div>
           </div>
           
           <nav className="hidden lg:flex items-center gap-6 text-[11px] uppercase tracking-wider font-semibold">
-            <a href="#logos_section" className="text-gray-400 hover:text-[#0070F3] transition-all duration-300 hover:translate-y-[-1px]">Logotipos</a>
-            <a href="#mockup_sandbox_section" className="text-gray-400 hover:text-[#0070F3] transition-all duration-300 hover:translate-y-[-1px]">Mockups</a>
-            <a href="#colors_section" className="text-gray-400 hover:text-[#8B5CF6] transition-all duration-300 hover:translate-y-[-1px]">Cores</a>
-            <a href="#typography_section" className="text-gray-400 hover:text-[#8B5CF6] transition-all duration-300 hover:translate-y-[-1px]">Tipografia</a>
-            <a href="#rules_section" className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-y-[-1px]">Boas Práticas</a>
+            <a href="#logos_section" className="text-gray-400 hover:text-[#0070F3] transition-all duration-300 hover:-translate-y-px">Logotipos</a>
+            <a href="#mockup_sandbox_section" className="text-gray-400 hover:text-[#0070F3] transition-all duration-300 hover:-translate-y-px">Mockups</a>
+            <a href="#colors_section" className="text-gray-400 hover:text-[#8B5CF6] transition-all duration-300 hover:-translate-y-px">Cores</a>
+            <a href="#typography_section" className="text-gray-400 hover:text-[#8B5CF6] transition-all duration-300 hover:-translate-y-px">Tipografia</a>
+            <a href="#rules_section" className="text-gray-400 hover:text-white transition-all duration-300 hover:-translate-y-px">Boas Práticas</a>
           </nav>
 
           <div className="flex flex-wrap items-center gap-2">
@@ -951,7 +951,7 @@ ${aiMarkdownText}`;
               id="download_md_top_btn"
               href="/identidade_visual_nexa.md" 
               download="identidade_visual_nexa.md"
-              className="px-3.5 py-1.5 bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] hover:opacity-95 rounded-lg text-xs font-bold text-white transition-all shadow-md shadow-blue-500/10 border border-white/10 flex items-center gap-1.5 cursor-pointer active:scale-95 hover:shadow-[0_0_15px_rgba(0,112,243,0.2)]"
+              className="px-3.5 py-1.5 bg-linear-to-r from-[#0070F3] to-[#8B5CF6] hover:opacity-95 rounded-lg text-xs font-bold text-white transition-all shadow-md shadow-blue-500/10 border border-white/10 flex items-center gap-1.5 cursor-pointer active:scale-95 hover:shadow-[0_0_15px_rgba(0,112,243,0.2)]"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Baixar Guia (.md)</span>
@@ -968,10 +968,10 @@ ${aiMarkdownText}`;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative rounded-3xl bg-gradient-to-br from-[#121625]/85 via-[#0B0E14]/95 to-[#121625]/85 border border-white/5 p-8 sm:p-12 overflow-hidden shadow-2xl backdrop-blur-sm shadow-[0_15px_50px_-15px_rgba(0,112,243,0.12)]"
+          className="relative rounded-3xl bg-linear-to-br from-[#121625]/85 via-[#0B0E14]/95 to-[#121625]/85 border border-white/5 p-8 sm:p-12 overflow-hidden backdrop-blur-sm shadow-[0_15px_50px_-15px_rgba(0,112,243,0.12)]"
         >
           {/* Glowing particle orb */}
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-bl from-[#0070F3]/8 via-[#8B5CF6]/5 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" />
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-linear-to-bl from-[#0070F3]/8 via-[#8B5CF6]/5 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" />
           
           <div className="relative max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono tracking-widest uppercase font-bold text-blue-400">
@@ -980,7 +980,7 @@ ${aiMarkdownText}`;
             </div>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight leading-[1.12]">
-              <span className="bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent drop-shadow-md">
+              <span className="bg-linear-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent drop-shadow-md">
                 A energia e precisão da marca NEXA em suas mãos.
               </span>
             </h2>
@@ -1193,7 +1193,7 @@ ${aiMarkdownText}`;
                     <a
                       href={logo.path}
                       download={logo.path.split('/').pop()}
-                      className="flex-1 flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-pink-500/10 to-purple-500/10 hover:from-pink-500/20 hover:to-purple-500/20 border border-pink-500/20 hover:border-pink-500/40 text-xs font-semibold text-white hover:text-cyan-300 transition-all cursor-pointer"
+                      className="flex-1 flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-linear-to-r from-pink-500/10 to-purple-500/10 hover:from-pink-500/20 hover:to-purple-500/20 border border-pink-500/20 hover:border-pink-500/40 text-xs font-semibold text-white hover:text-cyan-300 transition-all cursor-pointer"
                       title={logo.path.endsWith('.png') ? "Baixar imagem original" : "Baixar arquivo SVG original"}
                     >
                       <Download className="w-3.5 h-3.5" />
@@ -1472,7 +1472,7 @@ ${aiMarkdownText}`;
                   id="exporter_download_btn"
                   onClick={handleSingleExport}
                   disabled={isExporting}
-                  className="py-3.5 rounded-xl bg-gradient-to-r from-[#0070F3] to-[#00DFD8] text-white font-bold text-xs uppercase tracking-wider hover:opacity-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/25 disabled:opacity-50 cursor-pointer active:scale-98"
+                  className="py-3.5 rounded-xl bg-linear-to-r from-[#0070F3] to-[#00DFD8] text-white font-bold text-xs uppercase tracking-wider hover:opacity-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/25 disabled:opacity-50 cursor-pointer active:scale-98"
                 >
                   <Download className="w-4 h-4 shrink-0" />
                   <span>{isExporting ? 'Processando...' : 'Baixar Imagem'}</span>
@@ -1480,7 +1480,7 @@ ${aiMarkdownText}`;
 
                 <button
                   onClick={addToPackageQueue}
-                  className="py-3.5 rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white font-bold text-xs uppercase tracking-wider hover:opacity-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-pink-500/10 hover:shadow-pink-500/25 cursor-pointer active:scale-98"
+                  className="py-3.5 rounded-xl bg-linear-to-r from-[#8B5CF6] to-[#EC4899] text-white font-bold text-xs uppercase tracking-wider hover:opacity-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-pink-500/10 hover:shadow-pink-500/25 cursor-pointer active:scale-98"
                 >
                   <Copy className="w-4 h-4 shrink-0" />
                   <span>+ Add ao Pacote</span>
@@ -1489,7 +1489,7 @@ ${aiMarkdownText}`;
             </div>
 
             {/* Right preview Column (7 cols) */}
-            <div className="lg:col-span-7 flex flex-col items-center justify-center p-6 bg-black/40 border border-white/5 rounded-2xl h-full min-h-[360px] relative overflow-hidden">
+            <div className="lg:col-span-7 flex flex-col items-center justify-center p-6 bg-black/40 border border-white/5 rounded-2xl h-full min-h-90 relative overflow-hidden">
               <div className="absolute top-3 left-3 flex items-center gap-1.5 text-[10px] font-mono text-gray-400 uppercase tracking-wider">
                 <Eye className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                 <span>Preview de Renderização</span>
@@ -1634,7 +1634,7 @@ ${aiMarkdownText}`;
                               <span>•</span>
                               <span>{activeSize}px</span>
                               <span>•</span>
-                              <span className="truncate max-w-[80px]">{bgDesc}</span>
+                              <span className="truncate max-w-20">{bgDesc}</span>
                             </div>
                           </div>
                         </div>
@@ -1655,7 +1655,7 @@ ${aiMarkdownText}`;
                   <button
                     onClick={downloadCompletePackage}
                     disabled={isDownloadingPackage}
-                    className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white font-bold text-xs uppercase tracking-wider hover:opacity-95 transition-all flex items-center gap-2 shadow-lg shadow-purple-500/20 disabled:opacity-50 cursor-pointer"
+                    className="px-6 py-3 rounded-xl bg-linear-to-r from-[#8B5CF6] to-[#EC4899] text-white font-bold text-xs uppercase tracking-wider hover:opacity-95 transition-all flex items-center gap-2 shadow-lg shadow-purple-500/20 disabled:opacity-50 cursor-pointer"
                   >
                     <Download className={`w-4 h-4 shrink-0 ${isDownloadingPackage ? 'animate-spin' : ''}`} />
                     <span>{isDownloadingPackage ? 'Gerando Pacote ZIP...' : `Baixar Pacote Completo (${packageQueue.length} itens)`}</span>
@@ -1847,14 +1847,14 @@ ${aiMarkdownText}`;
             </div>
 
             {/* Mockup Rendering Arena (7 cols) */}
-            <div className="lg:col-span-7 flex items-center justify-center p-6 bg-black/40 border border-white/5 rounded-2xl min-h-[400px] relative overflow-hidden">
+            <div className="lg:col-span-7 flex items-center justify-center p-6 bg-black/40 border border-white/5 rounded-2xl min-h-100 relative overflow-hidden">
               <div className="absolute top-3 left-3 flex items-center gap-1.5 text-[10px] font-mono text-gray-500 uppercase tracking-wider">
                 <Monitor className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                 <span>Simulação em Tempo Real</span>
               </div>
 
               {/* LIVE CARD RENDERING */}
-              <div className="w-full max-w-[380px] transition-all duration-500 hover:scale-[1.01]">
+              <div className="w-full max-w-95 transition-all duration-500 hover:scale-[1.01]">
                 
                 {/* Instagram Post Template */}
                 {mockupTemplate === 'instagram' && (
@@ -1862,7 +1862,7 @@ ${aiMarkdownText}`;
                     {/* Header */}
                     <div className="flex items-center justify-between px-3.5 py-3 border-b border-white/5 bg-[#0f121d]">
                       <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-full p-0.5 bg-gradient-to-tr from-[#0070F3] to-[#8B5CF6] flex items-center justify-center">
+                        <div className="w-7 h-7 rounded-full p-0.5 bg-linear-to-tr from-[#0070F3] to-[#8B5CF6] flex items-center justify-center">
                           <div className="w-full h-full rounded-full bg-[#0b0e14] flex items-center justify-center overflow-hidden">
                             <img src={`${import.meta.env.BASE_URL}assets/core/nexa_isomark_light_transp.svg`} alt="Nexa Avatar" className="w-[75%] h-[75%] object-contain" referrerPolicy="no-referrer" />
                           </div>
@@ -1880,14 +1880,14 @@ ${aiMarkdownText}`;
                     <div 
                       className={`aspect-square w-full relative flex flex-col justify-between p-6 overflow-hidden transition-all duration-500 ${
                         mockupBg === 'dark_ambient' ? 'bg-[#0B0E14] text-white' :
-                        mockupBg === 'neon_glow' ? 'bg-gradient-to-br from-[#0070F3]/15 to-[#8B5CF6]/15 border-white/5' :
+                        mockupBg === 'neon_glow' ? 'bg-linear-to-br from-[#0070F3]/15 to-[#8B5CF6]/15 border-white/5' :
                         mockupBg === 'minimal_white' ? 'bg-white text-gray-900' :
                         'checkered-bg'
                       }`}
                     >
                       {/* Tech grid elements if grid is active */}
                       {mockupBg === 'tech_grid' && (
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
+                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[20px_20px] pointer-events-none" />
                       )}
 
                       {/* Header Logo */}
@@ -1905,10 +1905,10 @@ ${aiMarkdownText}`;
 
                       {/* Headline Text */}
                       <div className="space-y-2 z-10">
-                        <h4 className="text-xl font-display font-black tracking-tight leading-tight uppercase bg-gradient-to-r from-white via-white to-gray-200 bg-clip-text text-transparent">
+                        <h4 className="text-xl font-display font-black tracking-tight leading-tight uppercase bg-linear-to-r from-white via-white to-gray-200 bg-clip-text text-transparent">
                           {mockupText || 'MOLDANDO O AMANHÃ INDUSTRIAL COM DESIGN E IA.'}
                         </h4>
-                        <div className="w-12 h-1 bg-gradient-to-r from-[#0070F3] to-[#8B5CF6]" />
+                        <div className="w-12 h-1 bg-linear-to-r from-[#0070F3] to-[#8B5CF6]" />
                       </div>
 
                       {/* Abstract technical badge */}
@@ -1941,14 +1941,14 @@ ${aiMarkdownText}`;
                     <div 
                       className={`h-44 w-full relative flex flex-col justify-between p-5 overflow-hidden transition-all duration-500 ${
                         mockupBg === 'dark_ambient' ? 'bg-[#0B0E14] text-white' :
-                        mockupBg === 'neon_glow' ? 'bg-gradient-to-r from-[#0070F3]/10 to-[#8B5CF6]/10 border-white/5' :
+                        mockupBg === 'neon_glow' ? 'bg-linear-to-r from-[#0070F3]/10 to-[#8B5CF6]/10 border-white/5' :
                         mockupBg === 'minimal_white' ? 'bg-white text-gray-900' :
                         'checkered-bg'
                       }`}
                     >
                       {/* Tech grid elements if grid is active */}
                       {mockupBg === 'tech_grid' && (
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:15px_15px] pointer-events-none" />
+                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-size-[15px_15px] pointer-events-none" />
                       )}
 
                       {/* Header Logo */}
@@ -1965,7 +1965,7 @@ ${aiMarkdownText}`;
                       </div>
 
                       {/* Center Content */}
-                      <div className="space-y-1.5 z-10 max-w-[240px]">
+                      <div className="space-y-1.5 z-10 max-w-60">
                         <h4 className="text-[13px] font-display font-bold tracking-tight leading-snug uppercase text-white">
                           {mockupText || 'SISTEMAS INTEGRADOS DE ALTÍSSIMO DESEMPENHO.'}
                         </h4>
@@ -1973,7 +1973,7 @@ ${aiMarkdownText}`;
                       </div>
 
                       {/* Minimal visual progress strip */}
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0070F3] to-[#8B5CF6]" />
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-[#0070F3] to-[#8B5CF6]" />
                     </div>
 
                     {/* LinkedIn User Meta Preview */}
@@ -1992,7 +1992,7 @@ ${aiMarkdownText}`;
                 {/* Digital Employee Badge Template */}
                 {mockupTemplate === 'badge' && (
                   <div className="bg-[#121625] border border-white/10 rounded-2xl overflow-hidden shadow-2xl p-5 text-center relative">
-                    <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#0070F3] to-[#8B5CF6]" />
+                    <div className="absolute top-0 inset-x-0 h-1.5 bg-linear-to-r from-[#0070F3] to-[#8B5CF6]" />
                     
                     {/* Badge top lanyard clip slot */}
                     <div className="w-10 h-2 bg-black/60 rounded-full mx-auto mb-4 border border-white/10" />
@@ -2009,7 +2009,7 @@ ${aiMarkdownText}`;
 
                     {/* Profile avatar frame */}
                     <div className="relative w-20 h-20 mx-auto mb-3">
-                      <div className="w-full h-full rounded-full p-0.5 bg-gradient-to-b from-[#0070F3] to-[#8B5CF6] flex items-center justify-center overflow-hidden shadow-lg">
+                      <div className="w-full h-full rounded-full p-0.5 bg-linear-to-b from-[#0070F3] to-[#8B5CF6] flex items-center justify-center overflow-hidden shadow-lg">
                         <div className="w-full h-full rounded-full bg-black/40 flex items-center justify-center">
                           <User className="w-8 h-8 text-blue-400" />
                         </div>
@@ -2096,14 +2096,14 @@ ${aiMarkdownText}`;
                     <div 
                       className={`h-40 w-full relative flex flex-col justify-between p-5 overflow-hidden transition-all duration-500 ${
                         mockupBg === 'dark_ambient' ? 'bg-[#0B0E14] text-white' :
-                        mockupBg === 'neon_glow' ? 'bg-gradient-to-r from-[#0070F3]/15 to-[#8B5CF6]/15 border-white/5' :
+                        mockupBg === 'neon_glow' ? 'bg-linear-to-r from-[#0070F3]/15 to-[#8B5CF6]/15 border-white/5' :
                         mockupBg === 'minimal_white' ? 'bg-white text-gray-900' :
                         'checkered-bg'
                       }`}
                     >
                       {/* Tech grid elements if grid is active */}
                       {mockupBg === 'tech_grid' && (
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
+                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[16px_16px] pointer-events-none" />
                       )}
 
                       {/* Header Logo */}
@@ -2124,7 +2124,7 @@ ${aiMarkdownText}`;
                         <h4 className="text-[12px] sm:text-[13px] font-display font-black tracking-tight leading-tight uppercase text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                           {mockupText || 'LIDERANDO A REVOLUÇÃO COGNITIVA NA INDÚSTRIA COM IA.'}
                         </h4>
-                        <div className="w-8 h-[2px] bg-gradient-to-r from-[#0070F3] to-[#8B5CF6]" />
+                        <div className="w-8 h-0.5 bg-linear-to-r from-[#0070F3] to-[#8B5CF6]" />
                       </div>
                     </div>
 
@@ -2162,14 +2162,14 @@ ${aiMarkdownText}`;
                     <div 
                       className={`h-32 w-full relative flex flex-col justify-center items-center text-center p-6 overflow-hidden transition-all duration-500 ${
                         mockupBg === 'dark_ambient' ? 'bg-[#0B0E14] text-white' :
-                        mockupBg === 'neon_glow' ? 'bg-gradient-to-tr from-[#0070F3]/10 to-[#8B5CF6]/15 border-white/5' :
+                        mockupBg === 'neon_glow' ? 'bg-linear-to-tr from-[#0070F3]/10 to-[#8B5CF6]/15 border-white/5' :
                         mockupBg === 'minimal_white' ? 'bg-white text-gray-900' :
                         'checkered-bg'
                       }`}
                     >
                       {/* Tech grid elements if grid is active */}
                       {mockupBg === 'tech_grid' && (
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:12px_12px] pointer-events-none" />
+                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-size-[12px_12px] pointer-events-none" />
                       )}
 
                       {/* Brand Logo in Center */}
@@ -2183,7 +2183,7 @@ ${aiMarkdownText}`;
                           />
                         </div>
                         
-                        <h4 className="text-[10px] sm:text-[11px] font-display font-bold tracking-tight uppercase max-w-[280px] text-white drop-shadow-md">
+                        <h4 className="text-[10px] sm:text-[11px] font-display font-bold tracking-tight uppercase max-w-70 text-white drop-shadow-md">
                           {mockupText || 'TECNOLOGIA, DESIGN E IA INDUSTRIAL • NOVOS VÍDEOS TODA SEMANA'}
                         </h4>
                       </div>
@@ -2221,16 +2221,16 @@ ${aiMarkdownText}`;
                     </div>
 
                     <div 
-                      className={`h-[350px] w-full relative flex flex-col justify-between p-4 overflow-hidden transition-all duration-500 bg-cover bg-center ${
+                      className={`h-87.5 w-full relative flex flex-col justify-between p-4 overflow-hidden transition-all duration-500 bg-cover bg-center ${
                         mockupBg === 'dark_ambient' ? 'bg-[#05070a]' :
-                        mockupBg === 'neon_glow' ? 'bg-gradient-to-b from-[#180a2b] via-[#05070a] to-[#041d24]' :
+                        mockupBg === 'neon_glow' ? 'bg-linear-to-b from-[#180a2b] via-[#05070a] to-[#041d24]' :
                         mockupBg === 'minimal_white' ? 'bg-[#F3F4F6] text-gray-900' :
                         'checkered-bg'
                       }`}
                     >
                       {/* Tech grid elements if grid is active */}
                       {mockupBg === 'tech_grid' && (
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:14px_14px] pointer-events-none" />
+                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-size-[14px_14px] pointer-events-none" />
                       )}
 
                       {/* Header Tab Bar */}
@@ -2307,7 +2307,7 @@ ${aiMarkdownText}`;
 
                           {/* Spinning disk icon */}
                           <div className="w-7 h-7 rounded-full bg-black/80 border border-white/20 p-1 flex items-center justify-center animate-spin" style={{ animationDuration: '4s' }}>
-                            <div className="w-full h-full rounded-full bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] flex items-center justify-center text-[5px]">
+                            <div className="w-full h-full rounded-full bg-linear-to-r from-[#0070F3] to-[#8B5CF6] flex items-center justify-center text-[5px]">
                               💿
                             </div>
                           </div>
@@ -2489,9 +2489,9 @@ ${aiMarkdownText}`;
                   <span className="px-2 py-0.5 bg-blue-500/10 border border-blue-500/20 rounded text-[9px] font-semibold text-blue-400 font-mono">DISPLAY ONLY</span>
                 </div>
 
-                <div className="p-6 bg-black/45 rounded-xl border border-white/5 flex items-center justify-center min-h-[100px] relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-[radial-gradient(rgba(0,112,243,0.05)_1px,transparent_1px)] bg-[size:16px_16px] opacity-40" />
-                  <h1 className="text-2xl font-display font-black tracking-tight text-center uppercase bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent drop-shadow-md select-none group-hover:scale-105 transition-all duration-300">
+                <div className="p-6 bg-black/45 rounded-xl border border-white/5 flex items-center justify-center min-h-25 relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-[radial-gradient(rgba(0,112,243,0.05)_1px,transparent_1px)] bg-size-[16px_16px] opacity-40" />
+                  <h1 className="text-2xl font-display font-black tracking-tight text-center uppercase bg-linear-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent drop-shadow-md select-none group-hover:scale-105 transition-all duration-300">
                     NEXA INTELLIGENCE
                   </h1>
                 </div>
@@ -2505,10 +2505,10 @@ ${aiMarkdownText}`;
                     <div className="flex items-center justify-between bg-black/60 px-3 py-2 rounded-xl border border-white/5">
                       <div className="truncate pr-4 text-left">
                         <p className="text-[9px] font-mono text-gray-500">CLASSES TAILWIND CSS</p>
-                        <p className="text-xs font-mono bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent font-semibold truncate">bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent</p>
+                        <p className="text-xs font-mono bg-linear-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent font-semibold truncate">bg-linear-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent</p>
                       </div>
                       <button
-                        onClick={() => copyToClipboard('bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent', setCopiedTitleTw)}
+                        onClick={() => copyToClipboard('bg-linear-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent', setCopiedTitleTw)}
                         className="p-2 bg-white/5 hover:bg-white/10 rounded-lg text-gray-400 hover:text-white transition-all cursor-pointer shrink-0"
                       >
                         {copiedTitleTw ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3.5 h-3.5" />}
@@ -2518,7 +2518,7 @@ ${aiMarkdownText}`;
                     <div className="flex items-center justify-between bg-black/60 px-3 py-2 rounded-xl border border-white/5">
                       <div className="truncate pr-4 text-left">
                         <p className="text-[9px] font-mono text-gray-500">CÓDIGO CSS NATIVO</p>
-                        <p className="text-xs font-mono bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent font-semibold truncate">background: linear-gradient(45deg, #0070F3, #8B5CF6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;</p>
+                        <p className="text-xs font-mono bg-linear-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent font-semibold truncate">background: linear-gradient(45deg, #0070F3, #8B5CF6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;</p>
                       </div>
                       <button
                         onClick={() => copyToClipboard('background: linear-gradient(45deg, #0070F3, #8B5CF6);\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;', setCopiedTitleCss)}
@@ -2539,16 +2539,16 @@ ${aiMarkdownText}`;
                 </div>
 
                 {/* Previews and Demos */}
-                <div className="grid grid-cols-2 gap-4 p-4 bg-black/45 rounded-xl border border-white/5 min-h-[100px] items-center">
+                <div className="grid grid-cols-2 gap-4 p-4 bg-black/45 rounded-xl border border-white/5 min-h-25 items-center">
                   <div className="flex flex-col items-center gap-1.5">
-                    <button className="w-full py-2.5 bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] hover:opacity-95 text-white shadow-[0_0_15px_rgba(0,112,243,0.3)] font-bold text-[11px] rounded-lg tracking-wider uppercase transition-all duration-300 active:scale-95 cursor-pointer">
+                    <button className="w-full py-2.5 bg-linear-to-r from-[#0070F3] to-[#8B5CF6] hover:opacity-95 text-white shadow-[0_0_15px_rgba(0,112,243,0.3)] font-bold text-[11px] rounded-lg tracking-wider uppercase transition-all duration-300 active:scale-95 cursor-pointer">
                       Sólido
                     </button>
                     <span className="text-[9px] font-mono text-gray-500">Botão Sólido</span>
                   </div>
 
                   <div className="flex flex-col items-center gap-1.5">
-                    <button className="w-full p-[1px] bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] rounded-lg transition-all duration-300 active:scale-95 cursor-pointer">
+                    <button className="w-full p-px bg-linear-to-r from-[#0070F3] to-[#8B5CF6] rounded-lg transition-all duration-300 active:scale-95 cursor-pointer">
                       <div className="w-full py-2.5 bg-[#0B0E14] hover:bg-[#121625]/90 rounded-[7px] text-white font-bold text-[11px] tracking-wider uppercase transition-colors">
                         Outline
                       </div>
@@ -2566,10 +2566,10 @@ ${aiMarkdownText}`;
                     <div className="flex items-center justify-between bg-black/60 px-3 py-2 rounded-xl border border-white/5">
                       <div className="truncate pr-4 text-left">
                         <p className="text-[9px] font-mono text-gray-500">CTA SÓLIDO (CLASSES)</p>
-                        <p className="text-xs font-mono bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent font-semibold truncate">bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] text-white shadow-[0_0_15px_rgba(0,112,243,0.3)]</p>
+                        <p className="text-xs font-mono bg-linear-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent font-semibold truncate">bg-linear-to-r from-[#0070F3] to-[#8B5CF6] text-white shadow-[0_0_15px_rgba(0,112,243,0.3)]</p>
                       </div>
                       <button
-                        onClick={() => copyToClipboard('bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] hover:opacity-95 text-white shadow-[0_0_15px_rgba(0,112,243,0.3)] font-bold py-3 px-6 rounded-xl transition-all duration-300 active:scale-95', setCopiedBtnSolid)}
+                        onClick={() => copyToClipboard('bg-linear-to-r from-[#0070F3] to-[#8B5CF6] hover:opacity-95 text-white shadow-[0_0_15px_rgba(0,112,243,0.3)] font-bold py-3 px-6 rounded-xl transition-all duration-300 active:scale-95', setCopiedBtnSolid)}
                         className="p-2 bg-white/5 hover:bg-white/10 rounded-lg text-gray-400 hover:text-white transition-all cursor-pointer shrink-0"
                       >
                         {copiedBtnSolid ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3.5 h-3.5" />}
@@ -2579,10 +2579,10 @@ ${aiMarkdownText}`;
                     <div className="flex items-center justify-between bg-black/60 px-3 py-2 rounded-xl border border-white/5">
                       <div className="truncate pr-4 text-left">
                         <p className="text-[9px] font-mono text-gray-500">CTA BORDA (MARCADO)</p>
-                        <p className="text-xs font-mono bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent font-semibold truncate">p-[1px] bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] com div interna bg-[#0B0E14]</p>
+                        <p className="text-xs font-mono bg-linear-to-r from-[#0070F3] to-[#8B5CF6] bg-clip-text text-transparent font-semibold truncate">p-px bg-linear-to-r from-[#0070F3] to-[#8B5CF6] com div interna bg-[#0B0E14]</p>
                       </div>
                       <button
-                        onClick={() => copyToClipboard('<button className="p-[1px] bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] rounded-xl transition-all duration-300 active:scale-95">\n  <div className="px-6 py-3 bg-[#0B0E14] hover:bg-[#121625] rounded-[11px] text-white font-bold transition-colors">\n    CTA Secundário\n  </div>\n</button>', setCopiedBtnOutline)}
+                        onClick={() => copyToClipboard('<button className="p-px bg-linear-to-r from-[#0070F3] to-[#8B5CF6] rounded-xl transition-all duration-300 active:scale-95">\n  <div className="px-6 py-3 bg-[#0B0E14] hover:bg-[#121625] rounded-[11px] text-white font-bold transition-colors">\n    CTA Secundário\n  </div>\n</button>', setCopiedBtnOutline)}
                         className="p-2 bg-white/5 hover:bg-white/10 rounded-lg text-gray-400 hover:text-white transition-all cursor-pointer shrink-0"
                       >
                         {copiedBtnOutline ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3.5 h-3.5" />}
@@ -2761,7 +2761,7 @@ ${aiMarkdownText}`;
         {/* AI INTEGRATOR PORTAL */}
         <section id="ai_section" className="relative rounded-3xl bg-[#0F121D]/90 border border-white/5 p-6 sm:p-8 space-y-8 overflow-hidden shadow-2xl backdrop-blur-sm">
           
-          <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-tr from-[#00FFFF]/10 via-transparent to-transparent rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 left-0 w-80 h-80 bg-linear-to-tr from-[#00FFFF]/10 via-transparent to-transparent rounded-full blur-3xl pointer-events-none" />
           
           <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 relative">
             <div className="space-y-2.5">
@@ -2790,7 +2790,7 @@ ${aiMarkdownText}`;
               <button
                 id="copy_prompt_wrapped_btn"
                 onClick={() => copyToClipboard(aiPromptWrapper, setCopiedPrompt)}
-                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#0070F3] to-[#8B5CF6] text-white text-xs font-bold transition-all shadow-lg hover:opacity-95 cursor-pointer active:scale-95 hover:shadow-[0_0_15px_rgba(0,112,243,0.2)]"
+                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-linear-to-r from-[#0070F3] to-[#8B5CF6] text-white text-xs font-bold transition-all shadow-lg hover:opacity-95 cursor-pointer active:scale-95 hover:shadow-[0_0_15px_rgba(0,112,243,0.2)]"
               >
                 {copiedPrompt ? <Check className="w-4 h-4 text-green-400" /> : <Sparkles className="w-4 h-4" />}
                 <span>{copiedPrompt ? 'Prompt Copiado!' : 'Copiar Prompt de Instrução'}</span>
@@ -2814,7 +2814,7 @@ ${aiMarkdownText}`;
               <div className="w-12" /> {/* spacer balance */}
             </div>
             
-            <div className="p-6 font-mono text-xs max-h-[450px] overflow-y-auto">
+            <div className="p-6 font-mono text-xs max-h-112.5 overflow-y-auto">
               <pre className="text-gray-300 whitespace-pre-wrap font-mono leading-relaxed select-all">
                 {aiMarkdownText}
               </pre>

@@ -21,7 +21,7 @@ try {
 
 export default defineConfig(() => {
   return {
-    base: '/NexaBrand/', 
+    base: '/nexa-web-brand-kit/', 
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
