@@ -1,0 +1,7 @@
+# 12. Segurança e Isolamento Vetorial
+
+## 1. Políticas de Proteção em Manipulação Vetorial
+* **Isolamento de Origem:** Todos os SVGs oficiais são servidos pelo próprio host da aplicação (`public/assets/*`). Imagens carregadas no elemento `Image` utilizam explicitamente `img.crossOrigin = 'anonymous'` para evitar contaminação do canvas (*tainted canvas*), que bloquearia a extração de Blobs via `canvas.toBlob`.
+* **Sanitização de Parse DOM:** O parsing de strings SVG via `DOMParser` é executado estritamente com o MIME type `image/svg+xml`. O sistema não avalia nem executa tags `<script>` eventualmente embutidas em vetores externos.
+* **Revogação Sistemática de Objeto de Memória (ObjectURL Hygiene):** Todo `URL.createObjectURL(blob)` gerado para pré-visualização, renderização intermediária de imagem ou download de arquivo ZIP é revogado explicitamente via `URL.revokeObjectURL()` imediatamente após o consumo, mitigando vazamentos de memória (Memory Leaks) em sessões longas.
+* **Limitação Rígida de Entradas Numéricas (Input Clamping):** A resolução customizada do usuário é forçada entre limites seguros via código (`Math.max(16, Math.min(10000, value))`), impedindo estouro de buffer de alocação de texturas gráficas no motor do navegador (Canvas Allocation Failure).\n
