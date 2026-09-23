@@ -3,7 +3,7 @@ name: Deploy do Vite/React para GitHub Pages
 on:
   push:
     branches:
-      - main # ou master
+      - master
 
 permissions:
   contents: read
