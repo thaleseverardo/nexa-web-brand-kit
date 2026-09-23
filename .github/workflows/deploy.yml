@@ -1,11 +1,10 @@
-# Fluxo de trabalho para construir e implantar um site Vite no GitHub Pages
-name: Deploy static content to Pages
+name: Deploy do Vite/React para GitHub Pages
 
 on:
   push:
-    branches: ['master'] # Atualiza sempre que houver push na master
+    branches:
+      - main # ou master
 
-# Configura as permissões do GITHUB_TOKEN para permitir o deploy
 permissions:
   contents: read
   pages: write
@@ -16,29 +15,29 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Node
+
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm install
-      - name: Build
+          cache: 'npm' # mude para 'yarn' ou 'pnpm' se usar outro gerenciador
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Gerar build
         run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
+
+      - name: Upload dos arquivos gerados (dist)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
-      - name: Deploy to GitHub Pages
+          path: './dist' # Pasta padrão de saída do Vite
+
+      - name: Deploy no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
