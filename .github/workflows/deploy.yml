@@ -17,6 +17,11 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,7 +30,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm' # mude para 'yarn' ou 'pnpm' se usar outro gerenciador
+          cache: 'npm'
 
       - name: Instalar dependências
         run: npm ci
@@ -36,7 +41,7 @@ jobs:
       - name: Upload dos arquivos gerados (dist)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Pasta padrão de saída do Vite
+          path: './dist'
 
       - name: Deploy no GitHub Pages
         id: deployment
