@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
         </div>
         <p>© 2026 Nexa. Todos os direitos reservados. Guia oficial de marca para uso interno e parceiros autorizados.</p>
         <div className="flex justify-center gap-4 text-gray-400">
-          <a href="/identidade_visual_nexa.md" download className="hover:text-white transition-colors flex items-center gap-1 cursor-pointer font-semibold">
+          <a href={`${import.meta.env.BASE_URL}identidade_visual_nexa.md`} download className="hover:text-white transition-colors flex items-center gap-1 cursor-pointer font-semibold">
             <span>Guia MD</span>
             <ExternalLink className="w-3 h-3" />
           </a>

@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
         <div className="flex flex-wrap items-center gap-2">
           <a 
             id="download_md_top_btn"
-            href="/identidade_visual_nexa.md" 
+            href={`${import.meta.env.BASE_URL}identidade_visual_nexa.md`} 
             download="identidade_visual_nexa.md"
             className="px-3.5 py-1.5 bg-linear-to-r from-[#0070F3] to-[#8B5CF6] hover:opacity-95 rounded-lg text-xs font-bold text-white transition-all shadow-md shadow-blue-500/10 border border-white/10 flex items-center gap-1.5 cursor-pointer active:scale-95 hover:shadow-[0_0_15px_rgba(0,112,243,0.2)]"
           >
